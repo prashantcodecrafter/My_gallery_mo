@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 500px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        .theme-btn, .gallery-btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .theme-btn {
+            background-color: #ff6b6b;
+            color: white;
+        }
+        .theme-btn:hover {
+            background-color: #ff4f4f;
+        }
+        .gallery-btn {
+            background-color: #4caf50;
+            color: white;
+        }
+        .gallery-btn:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .theme-btn, .gallery-btn {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Gallery Website</h1>
+        <p>"Every moment with you is a treasure worth keeping."</p>
+        <button class="theme-btn" onclick="changeTheme()">Change Theme</button>
+        <button class="gallery-btn" onclick="goToGallery()">See Our Gallery</button>
+    </div>
+    
+    <script>
+        function changeTheme() {
+            document.body.classList.toggle("red-theme");
+        }
+        function goToGallery() {
+            window.location.href = "gallery.html";
+        }
+    </script>
+</body>
+</html>
